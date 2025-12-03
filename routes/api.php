@@ -8,4 +8,6 @@ Route::get("/students", function (){
     return "Estoy en la ruta de students";
 });
 
-Route::get("/product", [productController::class, 'index']);
+
+Route::middleware("auth:sanctum")->get("/product", 
+[productController::class, "index"]);

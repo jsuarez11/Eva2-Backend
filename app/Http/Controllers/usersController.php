@@ -11,20 +11,10 @@ class usersController extends Controller
     public function index(Request $request){
         $query= User::query();
 
+        if($request->has("")){
+        
+        }
 
     }
-
-    public function addFavorite($productId)
-{
-    $user = auth()->user();
-    $user->favorites()->syncWithoutDetaching([$productId]);
-    return response()->json(["message" => "Agregado a favoritos"], 200);
-}
-
-public function removeFavorite($productId)
-{
-    $user = auth()->user();
-    $user->favorites()->detach($productId);
-    return response()->json(["message" => "Eliminado de favoritos"], 200);
-}
+    
 }
