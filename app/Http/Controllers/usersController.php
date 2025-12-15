@@ -8,13 +8,5 @@ use Illuminate\Http\Request;
 
 class usersController extends Controller
 {
-    public function index(Request $request){
-        $query= User::query();
-
-        if($request->has("")){
-        
-        }
-
-    }
     
 }

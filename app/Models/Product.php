@@ -15,7 +15,13 @@ class Product extends Model
         "url_image"
     ];
 
-    public function favoredBy(){
-        return $this->belongsToMany(User::class,"favorites");
+    public function favoredBy()
+    {
+        return $this->belongsToMany(User::class, "favorites");
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }
